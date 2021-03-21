@@ -8,16 +8,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Label View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicTDDExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LabelViewController" id="BYZ-38-t0r" customClass="LabelViewController" customModule="BasicTDDExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxa-Md-TJj">
+                                <rect key="frame" x="0.0" y="60" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEc-24-FVV">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jxa-Md-TJj" secondAttribute="trailing" id="Qdy-TC-y4p"/>
+                            <constraint firstItem="Jxa-Md-TJj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="dgc-zo-8vk"/>
+                            <constraint firstItem="hEc-24-FVV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g7x-d9-oVc"/>
+                            <constraint firstItem="hEc-24-FVV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="udz-3j-iEu"/>
+                            <constraint firstItem="Jxa-Md-TJj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vPy-QZ-0JM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="showTitleButton" destination="hEc-24-FVV" id="5QW-kL-luw"/>
+                        <outlet property="titleLabel" destination="Jxa-Md-TJj" id="j3l-gX-fX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

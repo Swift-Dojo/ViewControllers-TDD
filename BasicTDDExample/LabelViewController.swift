@@ -8,16 +8,12 @@
 import UIKit
 
 class LabelViewController: UIViewController {
-    let titleLabel = UILabel()
-    let showTitleButton = UIButton()
+    @IBOutlet weak private(set) var titleLabel: UILabel!
+    @IBOutlet weak private(set) var showTitleButton: UIButton!
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         setUpUI()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     private func setUpUI() {
